@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>TECApp Admin Panel</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/feather/feather.css" />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="js/select.dataTables.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Sweet Alerts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="./images/mainImgs/logoMain.jpg" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav
+        class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row bg-white"
+      >
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+          <a
+            class="navbar-brand brand-logo mr-5 font-weight-bolder"
+            href="./index.html"
+          >
+            <img
+              src="./images/mainImgs/logoMain.png"
+              class="mr-2 logo"
+              alt="logo"
+            />TECApp
+          </a>
+          <a
+            class="navbar-brand brand-logo-mini font-weight-bolder"
+            href="./index.html"
+          >
+            <img src="./images/mainImgs/logoMain.png" alt="logo" />TECApp</a
+          >
+        </div>
+        <div class="">
+          <h4 class="font-weight-bolder pr-3 d-inline">UserName</h4>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger"><i class="ti-settings"></i></div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close ti-close"></i>
+            <p class="settings-heading">Naviqasiya Paneli</p>
+            <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+              <div class="img-ss rounded-circle bg-light border mr-3"></div>
+              Açıq
+            </div>
+            <div class="sidebar-bg-options" id="sidebar-dark-theme">
+              <div class="img-ss rounded-circle bg-dark border mr-3"></div>
+              Qaranlıq
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">İdarə Paneli</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#ui-basic"
+                aria-expanded="false"
+                aria-controls="ui-basic"
+              >
+                <i class="fa-solid fa-users mr-3"></i>
+                <span class="menu-title">Fakültələr</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./allFaculties.html"
+                      >Bütün Fakültələr</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./createFaculty.html"
+                      >Fakültə yarat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#charts"
+                aria-expanded="false"
+                aria-controls="charts"
+              >
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Hesabatlar</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/charts/chartjs.html"
+                      >Hesabat</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/charts/chartjs.html"
+                      >Hesabat yarat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#form-elements"
+                aria-expanded="false"
+                aria-controls="form-elements"
+              >
+                <i class="fa-regular fa-clipboard mr-3"></i>
+                <span class="menu-title">Plan</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/forms/basic_elements.html"
+                      >Planlar</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/forms/basic_elements.html"
+                      >Plan yarat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#icons"
+                aria-expanded="false"
+                aria-controls="icons"
+              >
+                <i class="fa-solid fa-newspaper mr-3"></i>
+                <span class="menu-title">Xəbərlər</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/icons/mdi.html">Xəbərlər</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/icons/mdi.html"
+                      >Xəbər yarat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="collapse"
+                href="#tables"
+                aria-expanded="false"
+                aria-controls="tables"
+              >
+                <i class="fa-solid fa-users-line mr-3"></i>
+                <span class="menu-title">Üzvlər</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/tables/basic-table.html"
+                      >Bütün üzvlər</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/tables/basic-table.html"
+                      >Üzv yarat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="row align-items-center">
+                  <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                    <h3 class="font-weight-bold">
+                      TECApp-in Admin Panelinə Xoş Gəldiniz!
+                    </h3>
+                  </div>
+                  <div class="col-12 col-xl-4">
+                    <div class="justify-content-end d-flex">
+                      <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                        <span class="date-time"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-5">
+                <div class="">
+                  <div class="card-people p-0">
+                    <img src="./images/mainImgs/main.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 grid-margin transparent">
+                <div class="row">
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-tale card-field">
+                      <div class="card-body">
+                        <h3 class="mb-4">
+                          İnformasiya kommunikasiya texnologiyalar fakültəsi
+                        </h3>
+                        <div class="fs-6 mb-2">
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Üzvlər
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Planlar
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Hesabat
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger faculty-btn remove-faculty"
+                          >
+                            Sil
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-tale card-field">
+                      <div class="card-body">
+                        <h3 class="mb-4">
+                          İnformasiya kommunikasiya texnologiyalar fakültəsi
+                        </h3>
+                        <div class="fs-6 mb-2">
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Üzvlər
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Planlar
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Hesabat
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger faculty-btn remove-faculty"
+                          >
+                            Sil
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-tale card-field">
+                      <div class="card-body">
+                        <h3 class="mb-4">
+                          İnformasiya kommunikasiya texnologiyalar fakültəsi
+                        </h3>
+                        <div class="fs-6 mb-2">
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Üzvlər
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Planlar
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Hesabat
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger faculty-btn remove-faculty"
+                          >
+                            Sil
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 stretch-card transparent">
+                    <div class="card card-tale card-field">
+                      <div class="card-body">
+                        <h3 class="mb-4">
+                          İnformasiya kommunikasiya texnologiyalar fakültəsi
+                        </h3>
+                        <div class="fs-6 mb-2">
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Üzvlər
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Planlar
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-light faculty-btn"
+                          >
+                            Hesabat
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger faculty-btn remove-faculty"
+                          >
+                            Sil
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-title">Advanced Table</p>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="table-responsive">
+                          <table
+                            id="example"
+                            class="display expandable-table"
+                            style="width: 100%"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Quote#</th>
+                                <th>Product</th>
+                                <th>Business type</th>
+                                <th>Policy holder</th>
+                                <th>Premium</th>
+                                <th>Status</th>
+                                <th>Updated at</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer px-5">
+            <div class="footer-content">
+              <div
+                class="footer-top d-flex justify-content-between align-items-center"
+              >
+                <div class="col-lg-6">
+                  <div class="social-media">
+                    <a href="https://www.facebook.com/AzerbaycanUnv">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a
+                      href="https://twitter.com/i/flow/login?redirect_after_login=%2FAzerbaijanUnv"
+                    >
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/AzerbaijanUnv">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/azerbaijan.university/">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-right">
+                  <div class="contact-area">
+                    <a href="te;:+994124314112">(+99412) 431 41 12/13/16/17</a>
+                    <a href="mailto:office@au.edu.az">office@au.edu.az</a>
+                    <p class="">
+                      Bakı şəhəri, Nəsimi rayonu, Ceyhun Hacıbəyli, 71
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <div class="copyright">
+                  <p class="text-white text-center font-weight-bolder">
+                    TECApp | © Azərbaycan Universiteti
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
+
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="js/dashboard.js"></script>
+    <script src="js/Chart.roundedBarCharts.js"></script>
+    <!-- End custom js for this page-->
+    <!-- My Custom JavaScript file -->
+    <script src="./js/custom.js"></script>
+    <!-- Sweet Alert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </body>
+</html>

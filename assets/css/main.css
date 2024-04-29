@@ -5,3 +5,96 @@
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.navbar .navbar-brand-wrapper .navbar-brand img {
+  height: 70px !important;
+}
+.navbar .navbar-brand-wrapper {
+  height: auto !important;
+}
+.navbar .navbar-brand-wrapper .brand-logo-mini img {
+  width: auto !important;
+  margin-left: 40px;
+}
+.navbar-brand .brand-logo-mini {
+  font-size: 15px !important;
+}
+.img-container__app {
+  max-width: 800px;
+}
+.app-img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 6px;
+}
+.img-container__uni {
+  max-width: 400px;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+.uni-logo {
+  width: 100%;
+  height: 100%;
+}
+.footer {
+  background-color: #00162b;
+}
+.social-media a {
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.social-media a:hover,
+.contact-area a:hover {
+  color: rgb(189, 189, 189);
+}
+.contact-area,
+.contact-area a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+}
+.btn-login {
+  background-color: #00162b;
+  color: white;
+  transform: 0.5s;
+  font-weight: 800;
+  border: 2px solid #00162b;
+}
+.btn-login:hover {
+  color: 00162b;
+  background-color: transparent;
+}
+.login-main {
+  background-color: #00162b;
+}
+.login-area {
+  margin: 200px auto;
+}
+.login-content {
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+.card-field {
+  background-color: #00162b !important;
+}
+.faculty-btn {
+  padding: 5px 10px;
+  width: 24%;
+  display: inline-block;
+  color: #00162b;
+  font-weight: 600;
+}
+.swal2-html-container,
+.swal2-title {
+  color: white !important;
+}
+.create-section__input {
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}
